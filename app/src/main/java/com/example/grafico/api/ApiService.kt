@@ -1,4 +1,4 @@
-package com.example.grafico.network
+package com.example.grafico.api
 
 import retrofit2.Response
 import retrofit2.http.GET

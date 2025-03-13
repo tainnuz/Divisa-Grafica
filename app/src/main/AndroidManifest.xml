@@ -18,7 +18,7 @@
 
         <!-- ContentProvider registrado correctamente -->
         <provider
-            android:name=".data.DivisaContentProvider"
+            android:name=".DivisaContentProvider"
             android:authorities="com.example.grafico"
             android:exported="true"
             android:grantUriPermissions="true"/>

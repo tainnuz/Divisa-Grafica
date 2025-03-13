@@ -1,4 +1,4 @@
-package com.example.grafico.network
+package com.example.grafico.api
 
 data class ExchangeRateResponse(
     val result: String,

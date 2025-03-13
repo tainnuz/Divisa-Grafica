@@ -1,4 +1,4 @@
-package com.example.grafico.data
+package com.example.grafico
 
 import android.content.ContentProvider
 import android.content.ContentUris
@@ -7,7 +7,7 @@ import android.content.UriMatcher
 import android.database.Cursor
 import android.net.Uri
 import android.util.Log
-import com.example.grafico.data.local.Divisa
+import com.example.grafico.data.Divisa
 import com.example.grafico.data.local.DivisaDatabase
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch

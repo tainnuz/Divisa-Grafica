@@ -9,12 +9,13 @@ import android.os.Looper
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.asLiveData
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.Constraints
 import androidx.work.NetworkType
 import com.example.grafico.data.DivisaWorker
-import com.example.grafico.data.local.Divisa
+import com.example.grafico.data.Divisa
 import com.example.grafico.data.local.DivisaDatabase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -50,8 +51,6 @@ class DivisaViewModel(application: Application) : AndroidViewModel(application) 
             }
         }
     }
-
-    // Método para actualizar los datos llamando al DivisaWorker
     fun actualizarDivisas() {
         val workRequest = OneTimeWorkRequestBuilder<DivisaWorker>()
             .setConstraints(
@@ -66,6 +65,10 @@ class DivisaViewModel(application: Application) : AndroidViewModel(application) 
 
         // Log para verificar que el Worker se está ejecutando
         println("Actualización de divisas iniciada")
+    }
+
+    fun getHistorialDivisa(divisa: String): LiveData<List<Divisa>> {
+        return divisaDao.getHistorialDivisa(divisa).asLiveData()
     }
 
     override fun onCleared() {

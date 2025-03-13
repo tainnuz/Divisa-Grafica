@@ -6,8 +6,8 @@ import android.net.Uri
 import android.util.Log
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
-import com.example.grafico.network.ApiService
-import com.example.grafico.network.RetrofitInstance
+import com.example.grafico.api.ApiService
+import com.example.grafico.api.RetrofitInstance
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

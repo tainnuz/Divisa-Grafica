@@ -63,7 +63,7 @@ class DivisaContentProvider : ContentProvider() {
 
         return when (uriMatcher.match(uri)) {
             CODE_DIVISAS -> {
-                Log.d(TAG, "insert: Inserción de divisa")
+                Log.d(TAG, "insert: Insercion de divisa")
                 val divisa = Divisa(
                     divisa = values?.getAsString("divisa") ?: "",
                     valor = values?.getAsDouble("valor") ?: 0.0
@@ -88,7 +88,7 @@ class DivisaContentProvider : ContentProvider() {
     }
 
     override fun update(uri: Uri, values: ContentValues?, selection: String?, selectionArgs: Array<String>?): Int {
-        Log.d(TAG, "update: Método aún no implementado")
+        Log.d(TAG, "update: Metodo aún no implementado")
         return 0
     }
 
